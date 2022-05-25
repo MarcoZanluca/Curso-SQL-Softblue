@@ -1,0 +1,13 @@
+SELECT *
+  FROM EMAIL E
+ WHERE E.CD_EMAIL IN (SELECT C.CD_EMAIL
+                        FROM CRISTAL C
+                       WHERE C.USUARIO LIKE 'RFERRON%'
+                          OR C.USUARIO LIKE 'LEANDRO%');
+
+SELECT *
+  FROM EMAIL E
+ WHERE E.CD_EMAIL = (SELECT C.CD_EMAIL
+                        FROM CRISTAL C
+                       WHERE C.USUARIO LIKE 'RFERRON%'
+                          OR C.USUARIO LIKE 'LEANDRO%');

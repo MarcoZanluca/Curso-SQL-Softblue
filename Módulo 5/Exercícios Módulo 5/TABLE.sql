@@ -1,0 +1,75 @@
+CREATE TABLE CURSOS_SOFTBLUE
+(
+       CURSO VARCHAR2(45),
+       INSTRUTOR VARCHAR2(45),
+       PRIMARY KEY (CURSO)
+);
+
+CREATE TABLE CURSOS
+(
+       CODIGO VARCHAR2(45),
+       NOME VARCHAR2(45),
+       TIPO VARCHAR2(45),
+       PRECO VARCHAR2(45),
+       PRIMARY KEY (CODIGO)
+);
+
+CREATE TABLE TIPO
+(
+       CODIGO VARCHAR2(45),
+       NOME VARCHAR2(45),
+       PRIMARY KEY (CODIGO)
+);
+
+CREATE TABLE INSTRUTOR
+(
+       CODIGO VARCHAR2(45),
+       NOME VARCHAR2(45),
+       TELEFONE VARCHAR2(45),
+       PRIMARY KEY (CODIGO)
+);
+
+/*-----------------------------------------------------------------*/
+  
+CREATE TABLE INFORMACOES_ALUNOS
+(
+       ALUNO VARCHAR2(45),
+       CURSO_MATRICULADO VARCHAR2(45),
+       PRIMARY KEY (ALUNO)
+);
+
+CREATE TABLE ALUNOS
+(
+       CODIGO VARCHAR2(45),
+       ALUNO VARCHAR2(45),
+       ENDERECO VARCHAR2(45),
+       EMAILS VARCHAR2(45),
+       PRIMARY KEY (CODIGO)
+);
+
+/*-----------------------------------------------------------------*/
+
+CREATE TABLE COMPRAS
+(
+       CURSO VARCHAR2(45),
+       INSTRUTOR VARCHAR2(45),
+       PRIMARY KEY (CURSO)
+);
+
+CREATE TABLE DADOS_COMPRA
+(
+       CODIGO VARCHAR2(45),
+       ALUNO VARCHAR2(45),
+       DIA/*data*/ VARCHAR2(45),
+       HORA VARCHAR2(45),
+       PRIMARY KEY (CODIGO)
+);
+
+CREATE TABLE DETALHES_COMPRA
+(
+       PEDIDO VARCHAR2(45),
+       CURSO VARCHAR2(45),
+       PRECO VARCHAR2(45)
+);
+
+/*-----------------------------------------------------------------*/
